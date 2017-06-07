@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> index</title>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+       
+<script scr="https://use.fontawsome.com/939e9dd52c.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+	
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<!--	//hide text-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+
+<link rel="stylesheet" href="queue-style.css"/>
+      
+</head> 
+<body>
+
+<div class="input">
+<h1>join the queue</h1>
+<input type="text" id="userText" placeholder=" add name...">
+	
+<button id="submit" onclick=  "saveData()">submit</button>
+</div>
+   <div>
+	   
+		   
+	  <div id="info">
+	<hidden><h2>your allocated time will appear above your name, it is 5 minutes after you joined.</h2>
+</hidden>
+	   </div> 
+	   
+	   <div id="timeline"> loading queue... </div>
+	
+    <br></div>
+    
+<div id="back">
+	<a href="info.html">
+	<button id="backBtn" onclick="submitClick()" >
+	<span>back</span></button>
+	</a>
+</div>
+ 
+	
+<br>
+	<br>
+
+
+
+
+	<div  class = "boob" >
+		
+	<hidden><p9>  </p9></hidden>
+	</div>
+
+	<br>
+	<br>
+	
+	<hidden> <p id="demo">   </p> </hidden>
+    </body> 
+    
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCz9qq8bQTmMeVKuCcw-r4u_yCRXg7hI8U",
+    authDomain: "queue-system-716a7.firebaseapp.com",
+    databaseURL: "https://queue-system-716a7.firebaseio.com",
+    projectId: "queue-system-716a7",
+    storageBucket: "queue-system-716a7.appspot.com",
+    messagingSenderId: "826761075653"
+  };
+  firebase.initializeApp(config);
+var database = firebase.database();
+  
+		
+function addZero(i) {
+	
+    if (i < 10) {
+        i = "0" + i;
+		
+    }
+    return i;
+}
+		
+
+
+		//time	
+  function saveData(){
+	
+	 var userInputText = $('#userText').val(); 
+	  var d = new Date();
+    var x = document.getElementById("demo");
+    var h = addZero(d.getHours());
+    var m = addZero(d.getMinutes());
+   // adding 5 min to the wait times
+	  var a = Math.abs(+5);
+	  var t = a + m ;
+	  
+//var Message = $("p3").text ("You can enter at...");
+
+	  
+    x.innerHTML = h + ":" + t ;
+	 
+	
+	  //shit 
+//	  	 
+//  if m > x {
+//	  var t = a + m ;
+//  }
+//	  
+//	  else{
+//		   var t = a - m ;
+//	  }
+	 
+	  
+	  
+	  
+
+	
+
+	 
+	  //what is pushed to firebase
+	 database.ref('/').push({
+		time: h + ":" + t,
+		name: userInputText,
+		//text: Message,
+		  
+	  });
+	}
+		database.ref('/').on('value', function(snapshot) {
+ $('#timeline').empty();
+			
+
+ 
+ var data = snapshot.val();
+ console.log(data);
+ 
+ $.each(data, function( index, value ) {
+ console.log(value); // first just log out the whole object to see it all
+ console.log(value.name); // you meant value.name
+ /* the data object contains a bunch of keys, which you want, but it also contains two objects you don't want in the list - sessions, and userText use the index object in the loop to check if you're looking at those objects, and if so, ignore them */
+ if(index == 'sessions' || index == 'userText'){
+ 
+return; // escape loop without putting anything in the list
+ }
+	//returing data
+	   
+	 
+ $( "#timeline" ).prepend( "<p>" + value.name,  + "</p>" );
+	 
+	$( "#timeline" ).prepend( "<p2>" +  value.time,  +  "</p2>" );
+	 
+// $( "#timeline" ).prepend( "<p3>" +  value.Text,  +  "</p3>" );
+	 
+ $("#userText").val('');
+});
+});</script>
+</html>

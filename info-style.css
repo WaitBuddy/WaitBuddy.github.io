@@ -14,7 +14,7 @@ body {
     font-size: 16px;
     outline: none;
 }
- 
+
 input, button {
     border: 0;
     padding: 10px;
@@ -30,7 +30,9 @@ img {
 	padding: 0em 1em;
 }
 
-.imgContainer {
+#container1, #container2, #container3 {
+	display: flex;
+	flex-direction: column;
 	width: 50%;
 	border-left: solid #424242 thin;
 	border-right: solid #424242 thin;
@@ -50,16 +52,30 @@ p {
 	padding: .6em;
 }
 
-#info {
+#join1 {
 	display: flex;
 	flex-direction: row;
-	padding: 0em 1em;
+	margin-top: 7em;
+	align-self: flex-end;
+	width: 100%;
+	border: solid #424242 thin;
 }
 
-.join {
+#join2 {
 	display: flex;
 	flex-direction: row;
-	width: 50%;
+	margin-top: 2.24em;
+	align-self: flex-end;
+	width: 100%;
+	border: solid #424242 thin;
+}
+
+#join3 {
+	display: flex;
+	flex-direction: row;
+	margin-top: 4.64em;
+	align-self: flex-end;
+	width: 100%;
 	border: solid #424242 thin;
 }
 
@@ -89,7 +105,7 @@ h5 {
 	font-weight: 100;
 	width: 30%;
 	height: 3.6em;
-	padding: 1em;
+	padding: .5em;
 	text-align: center;
 }
 
@@ -103,4 +119,208 @@ button {
 button:hover {
 	background-color: #3b3b3b;
 	color: white;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+	#imgLogo {
+		width: 15%;
+	}
+	
+	#exhibitions {
+		padding: 0em 2em;
+	}
+	
+	#container1, #container2, #container3 {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	h1 {
+		font-size: 80%;
+	}
+	
+	h2, p {
+		font-size: 70%;
+	}
+	
+	#join1 {
+		margin-top: 7em;
+		width: 100%;
+	}
+	
+	#join2 {
+		margin-top: 3.1em;
+	}
+	
+	#join3 {
+		margin-top: 4.85em;
+	}
+	
+	h3, h4, h5 {
+		font-size: 90%;
+	}
+	
+	button {
+		font-size: 89%;
+	}
+}
+
+@media (max-width: 768px) {
+	#imgLogo {
+		width: 15%;
+	}
+	
+	#exhibitions {
+		padding: 0em 2em;
+	}
+	
+	#container1, #container2, #container3 {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	h1 {
+		font-size: 80%;
+	}
+	
+	h2, p {
+		font-size: 70%;
+	}
+	
+	#join1 {
+		margin-top: 7em;
+		width: 100%;
+	}
+	
+	#join2 {
+		margin-top: 2.3em;
+	}
+	
+	#join3 {
+		margin-top: 4.34em;
+	}
+	
+	h3, h4, h5 {
+		font-size: 90%;
+	}
+	
+	button {
+		font-size: 89%;
+	}
+}
+
+@media (max-width: 425px) {
+	#imgLogo {
+		width: 15%;
+	}
+	
+	#exhibitions {
+		display: flex;
+		flex-direction: column;
+		padding: 0em 1em;
+	}
+	
+	#container1, #container2, #container3 {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	h1 {
+		font-size: 80%;
+	}
+	
+	h2, p {
+		font-size: 70%;
+	}
+	
+	#join1, #join2, #join3 {
+		margin-top: 1em;
+		width: 100%;
+	}
+	
+	h3, h4 {
+		font-size: 90%;
+	}
+	
+	h5 {
+		font-size: 90%;
+		padding-top: 1em;
+	}
+	
+	button {
+		font-size: 89%;
+	}
+}
+
+@media (max-width: 375px) {
+	#imgLogo {
+		width: 15%;
+	}
+	
+	#exhibitions {
+		display: flex;
+		flex-direction: column;
+		padding: 0em 1em;
+	}
+	
+	#container1, #container2, #container3 {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	h1 {
+		font-size: 80%;
+	}
+	
+	h2, p {
+		font-size: 70%;
+	}
+	
+	#join1, #join2, #join3 {
+		margin-top: 1em;
+		width: 100%;
+	}
+	
+	h3, h4, h5 {
+		font-size: 90%;
+	}
+	
+	button {
+		font-size: 89%;
+	}
+}
+
+@media (max-width: 320px) {
+	#exhibitions {
+		display: flex;
+		flex-direction: column;
+		padding: 0em 1em;
+	}
+	
+	#container1, #container2, #container3 {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	
+	h1 {
+		font-size: 80%;
+	}
+	
+	h2, p {
+		font-size: 70%;
+	}
+	
+	#join1, #join2, #join3 {
+		margin-top: 1em;
+		width: 100%;
+	}
+
+	h3, h4, h5 {
+		font-size: 90%;
+	}
+	
+	button {
+		font-size: 89%;
+	}
 }

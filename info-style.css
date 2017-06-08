@@ -144,9 +144,9 @@ button:hover {
 	
 	#join1, #join2, #join3 {
 		margin-top: 1em;
-		width: 100%;
+		width: 100%
 	}
-
+	
 	h3, h4, h5 {
 		font-size: 90%;
 	}
@@ -160,9 +160,9 @@ button:hover {
 	#exhibitions {
 		display: flex;
 		flex-direction: column;
-		padding: 0em 1em;
+		padding: 1em 0em;
 	}
-	
+
 	#container1, #container2, #container3 {
 		width: 100%;
 		margin-bottom: 1em;
@@ -178,9 +178,9 @@ button:hover {
 	
 	#join1, #join2, #join3 {
 		margin-top: 1em;
-		width: 100%;
+		width: 100%
 	}
-	
+
 	h3, h4, h5 {
 		font-size: 90%;
 	}
@@ -196,7 +196,7 @@ button:hover {
 		flex-direction: column;
 		padding: 0em 1em;
 	}
-	
+
 	#container1, #container2, #container3 {
 		width: 100%;
 		margin-bottom: 1em;
@@ -215,13 +215,8 @@ button:hover {
 		width: 100%;
 	}
 	
-	h3, h4 {
+	h3, h4, h5 {
 		font-size: 90%;
-	}
-	
-	h5 {
-		font-size: 90%;
-		padding-top: 1em;
 	}
 	
 	button {
@@ -230,10 +225,6 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-	#imgLogo {
-		width: 15%;
-	}
-	
 	#exhibitions {
 		padding: 0em 2em;
 	}
@@ -242,7 +233,7 @@ button:hover {
 		width: 100%;
 		margin-bottom: 1em;
 	}
-	
+
 	h1 {
 		font-size: 80%;
 	}
@@ -274,10 +265,6 @@ button:hover {
 }
 
 @media (max-width: 1024px) {
-	#imgLogo {
-		width: 15%;
-	}
-	
 	#exhibitions {
 		padding: 0em 2em;
 	}
@@ -299,7 +286,7 @@ button:hover {
 		margin-top: 7em;
 		width: 100%;
 	}
-	
+
 	#join2 {
 		margin-top: 3.1em;
 	}

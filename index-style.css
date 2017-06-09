@@ -140,11 +140,13 @@ button:hover {
 }
 
 /* responsive */
-@media (max-width: 320px) {
+@media (max-width: 1024px) {
+	#imgLogo {
+		width: 15%;
+	}
+	
 	#exhibitions {
-		display: flex;
-		flex-direction: column;
-		padding: 0em 1em;
+		padding: 0em 2em;
 	}
 	
 	#container1, #container2, #container3 {
@@ -160,11 +162,19 @@ button:hover {
 		font-size: 70%;
 	}
 	
-	#join1, #join2, #join3 {
-		margin-top: 1em;
+	#join1 {
+		margin-top: 7em;
 		width: 100%;
 	}
-
+	
+	#join2 {
+		margin-top: 3.1em;
+	}
+	
+	#join3 {
+		margin-top: 4.85em;
+	}
+	
 	h3, h4, h5 {
 		font-size: 90%;
 	}
@@ -174,15 +184,13 @@ button:hover {
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	#imgLogo {
 		width: 15%;
 	}
 	
 	#exhibitions {
-		display: flex;
-		flex-direction: column;
-		padding: 0em 1em;
+		padding: 0em 2em;
 	}
 	
 	#container1, #container2, #container3 {
@@ -198,9 +206,17 @@ button:hover {
 		font-size: 70%;
 	}
 	
-	#join1, #join2, #join3 {
-		margin-top: 1em;
+	#join1 {
+		margin-top: 7em;
 		width: 100%;
+	}
+	
+	#join2 {
+		margin-top: 2.3em;
+	}
+	
+	#join3 {
+		margin-top: 4.34em;
 	}
 	
 	h3, h4, h5 {
@@ -255,13 +271,15 @@ button:hover {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
 	#imgLogo {
 		width: 15%;
 	}
 	
 	#exhibitions {
-		padding: 0em 2em;
+		display: flex;
+		flex-direction: column;
+		padding: 0em 1em;
 	}
 	
 	#container1, #container2, #container3 {
@@ -277,17 +295,9 @@ button:hover {
 		font-size: 70%;
 	}
 	
-	#join1 {
-		margin-top: 7em;
+	#join1, #join2, #join3 {
+		margin-top: 1em;
 		width: 100%;
-	}
-	
-	#join2 {
-		margin-top: 2.3em;
-	}
-	
-	#join3 {
-		margin-top: 4.34em;
 	}
 	
 	h3, h4, h5 {
@@ -299,13 +309,11 @@ button:hover {
 	}
 }
 
-@media (max-width: 1024px) {
-	#imgLogo {
-		width: 15%;
-	}
-	
+@media (max-width: 320px) {
 	#exhibitions {
-		padding: 0em 2em;
+		display: flex;
+		flex-direction: column;
+		padding: 0em 1em;
 	}
 	
 	#container1, #container2, #container3 {
@@ -321,19 +329,11 @@ button:hover {
 		font-size: 70%;
 	}
 	
-	#join1 {
-		margin-top: 7em;
+	#join1, #join2, #join3 {
+		margin-top: 1em;
 		width: 100%;
 	}
-	
-	#join2 {
-		margin-top: 3.1em;
-	}
-	
-	#join3 {
-		margin-top: 4.85em;
-	}
-	
+
 	h3, h4, h5 {
 		font-size: 90%;
 	}
